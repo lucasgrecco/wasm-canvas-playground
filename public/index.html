@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WebAssembly Demo</title>
+  <style>
+      body, canvas {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+      }
+  </style>
+</head>
+<body>
+<canvas id="canvas" width="2000" height="2000">
+  <script src="canvas.js"></script>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const context = canvas.getContext('2d');
+
+    //render circles o canvas
+    const render = (dataLength, circleStructSize) => {
+      let circles = new Int32Array(wasmMemory.buffer, _getCircles(canvas.width, canvas.height), dataLength);
+
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      // console.log(`Got ${circles} circles`);
+      // console.log('dataLength: ', dataLength);
+      // console.log(circles);
+
+      for (let i = 0; i < circles.length; i += circleStructSize) {
+        let circle = circles.slice(i, i + circleStructSize);
+        // console.log(circle);
+        //Draw the circle
+        context.beginPath();
+        context.arc(circle[0], circle[1], circle[2], 0, 2 * Math.PI, false);
+        context.fillStyle = `rgba(${circle[3]},${circle[4]},${circle[5]},0.8)`;
+        context.fill();
+      }
+
+      console.log('rendered');
+
+      window.requestAnimationFrame(() => {
+          render(dataLength, circleStructSize);
+        }
+      );
+    }
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "wasm-canvas",
+  "version": "1.0.0",
+  "description": "Webassembly Canvas Playground",
+  "main": "server.js",
+  "author": "Lucas Grecco <lucasgrecco@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
