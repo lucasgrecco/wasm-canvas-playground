@@ -1,4 +1,4 @@
-# Webassembly (WASM) Canvas Playground
+# WebAssembly (WASM) Canvas Playground
 This is a small project for a WASM course.
 
 ## Demo
