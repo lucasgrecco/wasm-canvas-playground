@@ -1,6 +1,6 @@
 {
-  "name": "ebassembly Canvas Playground",
-  "description": "ebassembly Canvas Playground",
+  "name": "Webassembly Canvas Playground",
+  "description": "Webassembly Canvas Playground",
   "repository": "https://github.com/lucasgrecco/wasm-canvas-playground",
   "keywords": ["wasm","node", "express"],
   "image": "heroku/nodejs"
