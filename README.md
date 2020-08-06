@@ -6,7 +6,7 @@ If you want to play around with this code, first you need Node.JS installed in y
 Inside the project folder, run :
 - npm install (or yarn)
 - run node server.js
-- [localhost:2222](localhost:2222)
+- [localhost:2222](localhost:5000)
 
 To go deeper and make some C code you will need Emscripten, which you can find here: 
 

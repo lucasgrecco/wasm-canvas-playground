@@ -14,4 +14,4 @@ app.use( express.static('public', {
 }) )
 
 // Start server
-app.listen( 2222, () => console.log('Server running on port 2222!') )
+app.listen( 5000, () => console.log('Server running on port 5000!') )
