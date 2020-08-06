@@ -1,0 +1,7 @@
+{
+  "name": "ebassembly Canvas Playground",
+  "description": "ebassembly Canvas Playground",
+  "repository": "https://github.com/lucasgrecco/wasm-canvas-playground",
+  "keywords": ["wasm","node", "express"],
+  "image": "heroku/nodejs"
+}
